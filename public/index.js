@@ -75,7 +75,7 @@ function setPicture(rank) {
     if (rank === 1) {
         doorImage.src = "assets/winner_bouncer.jpeg";
     } else if (rank <= 10) {
-        doorImage.src = "assets/bouncer_happy.jpeg";
+        doorImage.src = "assets/bouncer_intrigued.jpeg";
     } else if (rank <= 50) {
         doorImage.src = "assets/bouncer_neutral.jpeg";
     } else if (rank <= 100) {
