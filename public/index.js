@@ -1,19 +1,24 @@
-const secret = "";
-const scores = {}
-
 let guesses = {};
 
 const guessesList = document.getElementById("guess-list");
 
-function getScore(word) {
-    return scores[word] || null;
+async function getRank(word) {
+    const response = await fetch("/guess", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ word })
+    });
+    const data = await response.json();
+    return data.known ? data.score : null;
 }
 
 function pushGuess(guess, score) {
     guesses[guess] = score;
 }
 
-function handleGuess(event) {
+async function handleGuess(event) {
     event.preventDefault();
 
     const inputElement = document.getElementById("password-input");
@@ -21,7 +26,7 @@ function handleGuess(event) {
 
     inputElement.value = "";
 
-    const guessScore = getScore(guess);
+    const guessScore = await getRank(guess);
 
     if (guessScore === null) {
         alert("Invalid guess. Please try again.");

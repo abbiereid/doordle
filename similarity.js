@@ -17,3 +17,5 @@ function length(vec) {
     }
     return Math.sqrt(total);
 }
+
+module.exports = { cosineSimilarity };
