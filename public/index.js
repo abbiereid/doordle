@@ -1,5 +1,5 @@
-const secret = "pier";
-const scores = { sand: 60, bucket: 70, pier: 100 };
+const secret = "";
+const scores = {}
 
 let guesses = {};
 
