@@ -36,7 +36,7 @@ async function handleGuess(event) {
     pushGuess(guess, guessScore);
     render();
 
-    if (guessScore === 100) {
+    if (guessScore === 1) {
         alert("Congratulations! You've guessed the secret word!");
     }
 }
