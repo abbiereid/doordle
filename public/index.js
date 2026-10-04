@@ -28,6 +28,7 @@ async function resetGame() {
         throw new Error("Failed to reset the game.");
     }
     hint.textContent = `If you want to get through the door, you must say the secret password. Hint, the 10th closest word is: ${data.hint}`;
+    instruction.textContent = "Enter your guess below and press Enter:";
     guesses = {};
     setPicture(50);
     render();
