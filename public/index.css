@@ -2,32 +2,110 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     margin: 0;
-    background-color: #1f1e23;
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #231b33;
     color: #f0c207;
 }
 
 h1 {
     color: #f0c207;
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 }
 
 #password-input {
-    padding: 10px;
-    margin: 40px 0;
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(240, 194, 7, 0.5);
     border-radius: 4px;
+    font-size: 1rem;
+    background-color: rgba(9, 0, 18, 0.6);
+    color: #f0c207;
 }
 
-#submit-button {
-    padding: 10px 20px;
+.button {
+    padding: 14px 22px;
     background-color: #f0c207;
     color: #1f1e23;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1rem;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 1160px);
+    box-sizing: border-box;
+    background-color: rgba(9, 0, 18, 0.6);
+    padding: 36px;
+    border-radius: 15px;
+    gap: 16px;
+}
+
+.game-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 32px;
+}
+
+#door-image {
+    display: block;
+    width: min(100%, 600px);
+    height: auto;
+    border-radius: 15px;
+}
+
+.game-container p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#guess-list {
+    flex: 0 0 270px;
+    list-style-type: none;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 0;
+    background-color: #231b33;
+    border-radius: 10px;
+    height: 380px;
+    overflow-y: auto;
+
+    li {
+        padding: 8px 5px;
+        border-bottom: 1px solid #f0c207;
+    }
+}
+
+.game-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: min(100%, 720px);
+    margin-top: 24px;
+}
+
+#guess-form {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+}
+
+#reset-button {
+    background-color: transparent;
+    color: #f0c207;
+    border: 1px solid #f0c207;
 }

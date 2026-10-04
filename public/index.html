@@ -9,11 +9,21 @@
     </head>
     <body>
         <h1>Doordle</h1>
-        <form id="guess-form">
-            <input type="text" placeholder="Enter Password" id="password-input"/>
-            <button type="submit" id="submit-button">Submit</button>
-        </form>
-        <ul id="guess-list">
-        </ul>
+        <div class="game-container">
+            <div class="game-content">
+                <img id="door-image" src="assets/bouncer_neutral.jpeg" alt="Door Image"/>
+                <ul id="guess-list">
+                </ul>
+            </div>
+            <p id="hint">Welcome to Doordle!</p>
+            <p id="instructions"></p>
+        </div>
+        <div class="game-controls">
+            <form id="guess-form">
+                <input type="text" placeholder="Enter Password" id="password-input"/>
+                <button type="submit" id="submit-button" class="button">Submit</button>
+            </form>
+            <button id="reset-button" onclick="resetGame()" class="button">Reset Game</button>
+        </div>
     </body>
 </html>
